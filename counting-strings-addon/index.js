@@ -11,7 +11,7 @@ var text_gen = require("sdk/panel").Panel({
 // Create a button
 require("sdk/ui/button/action").ActionButton({
   id: "show-panel",
-  label: "Show Panel",
+  label: "Counting Strings",
   icon: {
     "16": "./icon-16.png",
     "32": "./icon-32.png",
