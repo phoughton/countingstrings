@@ -4,7 +4,7 @@ var data = require("sdk/self").data;
 var text_gen = require("sdk/panel").Panel({
   contentURL: data.url("countingstrings.html"),
   width: 600,
-  height:400,
+  height:430,
   contextMenu: true
 });
 
