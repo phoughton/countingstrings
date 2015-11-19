@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style type="text/css" media="all">
+      textarea {
+        margin: 10px;
+      }
+      body {
+        background-color: Beige ;
+      }
+    </style>
+  </head>
+<body>
+<H1>Counting Strings</H1>
+<form name="counter_form" onsubmit="count_it();return false;">Display a string of length: <input name="counter_max" size="10" value="100" /><br />
+The character: <input maxlength="1" name="pointer" size="1" value="*" /> marks the spot.<br /><BR />
+<input onclick="count_it();" type="BUTTON" value="Create!" /><br /><BR />
+<div style="text-align: center;"><span class="Apple-style-span" style="font-family: 'Lucida Grande';"><span class="Apple-style-span" style="font-size: 11px; white-space: pre;"><br />
+</span></span></div>The String you requested is:<br />
+<textarea cols="60%" name="counter_textarea" rows="9"></textarea><br />
+</form>
+<script language="javascript">
+function count_it(){
+ counter_max=document.counter_form.counter_max.value;
+ pointer_char=document.counter_form.pointer.value;
+ counter_string=counter_max.toString()+pointer_char;
+
+ // work backwards, prepending the string with the point at which you are at.
+ while (counter_string.length < counter_max ) {
+  prev_number=counter_max - counter_string.length;
+  counter_string = prev_number + pointer_char + counter_string;
+ } // while
+
+ // Incase of over-run, grab the subset of characters, ending at the end.
+ counter_string = counter_string.slice(-counter_max);
+ document.counter_form.counter_textarea.value=counter_string ;
+ //document.counter_form.check_length.value=counter_string.length;
+
+
+} //function
+</script>
+  </body>
+</html>

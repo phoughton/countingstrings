@@ -1,0 +1,16 @@
+{
+  "title": "Counting Strings Addon",
+  "name": "counting-strings-addon",
+  "version": "0.1.1",
+  "description": "Allows you to generate exact & measurable string lengths for testing",
+  "main": "index.js",
+  "author": "Pete Houghton",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "testing"
+  ]
+}
